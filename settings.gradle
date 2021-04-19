@@ -1,0 +1,3 @@
+include ':app'
+include ':singleadapter'
+rootProject.name = "test_app"
