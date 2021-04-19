@@ -11,11 +11,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
 public abstract class MyFragment<VM extends AndroidViewModel,Binding extends ViewDataBinding> extends Fragment {
-    private VM _vm;
-    private Binding _;
+    protected VM _vm;
+    protected Binding _;
 
-    protected void setBinding(LayoutInflater inflater, int layoutId, ViewGroup viewGroup,boolean attachRoot){
-        this._ = DataBindingUtil.inflate(inflater,layoutId,viewGroup,attachRoot);
+    protected void setBinding(LayoutInflater inflater, int layoutId, ViewGroup viewGroup){
+        this._ = DataBindingUtil.inflate(inflater,layoutId,viewGroup,false);
     }
 
     protected void setVM(ViewModelStoreOwner owner,Class<VM> vmClass){
