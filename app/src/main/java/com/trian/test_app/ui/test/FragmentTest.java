@@ -1,12 +1,9 @@
 package com.trian.test_app.ui.test;
 
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelStoreOwner;
 
 import android.view.LayoutInflater;
@@ -15,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.trian.test_app.R;
 import com.trian.test_app.databinding.FragmentTestBinding;
-import com.trian.test_app.ui.main.FragmentMainViewModel;
 import com.trian.test_app.utils.MyFragment;
 
 public class FragmentTest extends MyFragment<FragmentTestViewModel, FragmentTestBinding> {
@@ -30,7 +26,7 @@ public class FragmentTest extends MyFragment<FragmentTestViewModel, FragmentTest
                              @Nullable Bundle savedInstanceState) {
         setBinding(inflater,R.layout.fragment_test,container);
         setVM((ViewModelStoreOwner)getViewLifecycleOwner(), FragmentTestViewModel.class);
-        return _.getRoot();
+        return _v.getRoot();
     }
 
 

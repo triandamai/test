@@ -7,9 +7,9 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 
 public abstract class MyActivity<Binding extends ViewDataBinding> extends AppCompatActivity {
-    private Binding _;
+    private Binding _v;
 
     protected void setBinding(Activity activity,int layoutId){
-        this._ = DataBindingUtil.setContentView(activity,layoutId);
+        this._v = DataBindingUtil.setContentView(activity,layoutId);
     }
 }
